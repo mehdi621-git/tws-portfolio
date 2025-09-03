@@ -24,8 +24,8 @@ pipeline {
 
     stage("Pull from Docker Hub") {
       steps {
-        sh "docker pull mehdi621/simpleportfolio"
-        sh "docker tag mehdi621/simpleportfolio Pulledsimpleportfolio"
+        sh "docker pull mehdi621docker/simpleportfolio"
+        sh "docker tag mehdi621docker/simpleportfolio Pulledsimpleportfolio"
       }
     }
 
