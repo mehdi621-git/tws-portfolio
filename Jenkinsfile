@@ -25,13 +25,13 @@ pipeline {
     stage("Pull from Docker Hub") {
       steps {
         sh "docker pull mehdi621docker/simpleportfolio"
-        sh "docker tag mehdi621docker/simpleportfolio Pulledsimpleportfolio"
+        sh "docker tag mehdi621docker/simpleportfolio pulledsimpleportfolio"
       }
     }
 
     stage("Run the Container") {
       steps {
-        sh "docker run -d -p 8080:8081 Pulledsimpleportfolio"
+        sh "docker run -d -p 8080:8081 pulledsimpleportfolio"
       }
     }
   }
