@@ -32,7 +32,7 @@ pipeline {
     stage("Run the Container") {
       steps {
         sh "docker run -d -p 8080:8081 pulledsimpleportfolio"
-      }
+      } 
     }
   }
 }
