@@ -2,6 +2,11 @@ pipeline {
   agent { label 'dev' }
 
   stages {
+    stage("Pulling from Github"){
+      steps{
+        git url:"https://github.com/mehdi621-git/tws-portfolio.git", branch : 'main'
+      }
+    }
     stage("Build") {
       steps {
         sh "docker build -t mehdi621docker/simpleportfolio ."
